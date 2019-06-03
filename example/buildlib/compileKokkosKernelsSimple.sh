@@ -1,4 +1,4 @@
-KOKKOS_PATH=${HOME}/code/SST/kokkos #path to kokkos source
+KOKKOS_PATH=${PWD}/../../../kokkos #path to kokkos source
 KOKKOSKERNELS_SCALARS=double #the scalar types to instantiate =double,float...
 KOKKOSKERNELS_LAYOUTS=LayoutLeft #the layout types to instantiate.
 KOKKOSKERNELS_ORDINALS=int #ordinal types to instantiate
