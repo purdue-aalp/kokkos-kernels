@@ -7,7 +7,7 @@ KOKKOSKERNELS_PATH=../.. #path to kokkos-kernels top directory.
 CXX=${KOKKOS_PATH}/bin/nvcc_wrapper #icpc #
 KOKKOSKERNELS_OPTIONS=eti-only #options for kokkoskernels  
 KOKKOS_DEVICES=Serial,Cuda # other devices Cuda,Serial ..
-KOKKOS_ARCHS=BDW,Pascal61
+KOKKOS_ARCHS=Pascal61
 CXXFLAGS="-Wall -pedantic -Werror -O3 -g -Wshadow -Wsign-compare -Wtype-limits -Wuninitialized"
 
 ../../scripts/generate_makefile.bash --kokkoskernels-path=${KOKKOSKERNELS_PATH} --with-scalars=${KOKKOSKERNELS_SCALARS} --with-ordinals=${KOKKOSKERNELS_ORDINALS} --with-offsets=${KOKKOSKERNELS_OFFSETS} --kokkos-path=${KOKKOS_PATH} --with-devices=${KOKKOS_DEVICES} --arch=${KOKKOS_ARCHS} --compiler=${CXX} --with-options=${KOKKOSKERNELS_OPTIONS}  --cxxflags="${CXXFLAGS}"
